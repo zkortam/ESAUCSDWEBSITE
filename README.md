@@ -1,6 +1,23 @@
-# UC San Diego Egyptian Student Association Website
+# Egyptian Student Association at UCSD
 
-This is the official website for the Egyptian Student Association at UC San Diego. The website is built using Next.js, TypeScript, and Tailwind CSS.
+Official website for the Egyptian Student Association at UC San Diego.
+
+## Development
+
+This is a Next.js project deployed to GitHub Pages.
+
+### Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+### Deployment
+
+The site is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the main branch.
+
+Visit the live site at: https://zkortam.github.io/ESAUCSDWEBSITE/
 
 ## Features
 
@@ -16,26 +33,6 @@ This is the official website for the Egyptian Student Association at UC San Dieg
 - TypeScript
 - Tailwind CSS
 - React
-
-## Getting Started
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/ucsd-esa-website.git
-cd ucsd-esa-website
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Run the development server:
-```bash
-npm run dev
-```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
 ## Project Structure
 
