@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Red stripe -->
+  <rect width="1200" height="266.67" fill="#CE1126"/>
+  <!-- White stripe -->
+  <rect y="266.67" width="1200" height="266.67" fill="#FFFFFF"/>
+  <!-- Black stripe -->
+  <rect y="533.33" width="1200" height="266.67" fill="#000000"/>
+  <!-- Eagle of Saladin -->
+  <g transform="translate(600,400) scale(0.8)">
+    <path d="M0,-100 C50,-100 100,-50 100,0 C100,50 50,100 0,100 C-50,100 -100,50 -100,0 C-100,-50 -50,-100 0,-100" fill="#CE1126"/>
+    <path d="M-20,-80 L20,-80 L20,-60 L-20,-60 Z" fill="#000000"/>
+    <path d="M-40,-40 L40,-40 L40,-20 L-40,-20 Z" fill="#000000"/>
+    <path d="M-60,0 L60,0 L60,20 L-60,20 Z" fill="#000000"/>
+    <path d="M-40,40 L40,40 L40,60 L-40,60 Z" fill="#000000"/>
+  </g>
+</svg> 
