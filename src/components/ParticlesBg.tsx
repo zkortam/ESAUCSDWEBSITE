@@ -17,39 +17,49 @@ export default function ParticlesBg() {
     canvas.height = height * dpr;
     ctx.scale(dpr, dpr);
 
-    const PARTICLE_COUNT = 36;
+    const PARTICLE_COUNT = 50;
     const particles = Array.from({ length: PARTICLE_COUNT }).map(() => ({
       x: Math.random() * width,
       y: Math.random() * height,
-      r: Math.random() * 18 + 8,
-      dx: (Math.random() - 0.5) * 0.4,
-      dy: (Math.random() - 0.5) * 0.4,
-      opacity: Math.random() * 0.3 + 0.2,
+      r: Math.random() * 15 + 5,
+      dx: (Math.random() - 0.5) * 0.6,
+      dy: (Math.random() - 0.5) * 0.6,
+      opacity: Math.random() * 0.4 + 0.1,
+      pulseSpeed: Math.random() * 0.02 + 0.01,
+      pulsePhase: Math.random() * Math.PI * 2,
       color: [
-        `rgba(200,16,46,0.15)`, // primary
-        `rgba(0,107,84,0.12)`, // accent
-        `rgba(242,169,0,0.10)` // gold
+        `rgba(200,16,46,0.2)`,
+        `rgba(0,107,84,0.15)`,
+        `rgba(242,169,0,0.12)`
       ][Math.floor(Math.random() * 3)]
     }));
 
     let animationId: number;
+    let time = 0;
     function animate() {
       if (!ctx) return;
       ctx.clearRect(0, 0, width, height);
+      time += 0.016;
+
       for (const p of particles) {
+        const pulse = Math.sin(time * p.pulseSpeed + p.pulsePhase) * 0.2 + 1;
+        const currentSize = p.r * pulse;
+
         ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
+        ctx.arc(p.x, p.y, currentSize, 0, 2 * Math.PI);
         ctx.shadowColor = p.color;
-        ctx.shadowBlur = 24;
+        ctx.shadowBlur = 30;
         ctx.fillStyle = p.color;
-        ctx.globalAlpha = p.opacity;
+        ctx.globalAlpha = p.opacity * (0.8 + pulse * 0.2);
         ctx.fill();
         ctx.globalAlpha = 1;
         ctx.shadowBlur = 0;
-        // Move
+
         p.x += p.dx;
         p.y += p.dy;
-        // Bounce
+
+        p.dy += (Math.random() - 0.5) * 0.01;
+
         if (p.x < -p.r) p.x = width + p.r;
         if (p.x > width + p.r) p.x = -p.r;
         if (p.y < -p.r) p.y = height + p.r;
