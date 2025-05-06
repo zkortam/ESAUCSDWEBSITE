@@ -1,6 +1,9 @@
-# Egyptian Student Association at UCSD
+# ESAUCSDWEBSITE
+Egyptian Student Association at UCSD
 
 Official website for the Egyptian Student Association at UC San Diego.
+
+Last updated: 2024-05-06 12:30 UTC
 
 ## Development
 
