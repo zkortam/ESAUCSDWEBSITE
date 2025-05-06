@@ -101,25 +101,24 @@ export default function Home() {
       <Navigation language={language} onLanguageChange={setLanguage} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-32 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden min-h-[calc(80vh+150px)] flex items-center">
+      <section className="relative pt-24 pb-20 px-2 sm:pt-32 sm:pb-32 sm:px-4 lg:px-8 bg-white overflow-hidden min-h-[calc(80vh+150px)] flex items-center">
         {/* Enhanced Background Effects */}
         <ParticlesBg />
         <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/70 to-white/90 pointer-events-none z-0"></div>
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-primary/10 rounded-full filter blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/10 rounded-full filter blur-3xl translate-x-1/2 translate-y-1/2"></div>
+          <div className="absolute top-0 left-0 w-60 h-60 sm:w-96 sm:h-96 bg-primary/10 rounded-full filter blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-0 right-0 w-60 h-60 sm:w-96 sm:h-96 bg-accent/10 rounded-full filter blur-3xl translate-x-1/2 translate-y-1/2"></div>
         </div>
-        
-        <div className="max-w-7xl mx-auto relative">
-          <div className="text-center">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+        <div className="max-w-7xl mx-auto relative w-full">
+          <div className="text-center px-2 sm:px-0">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight">
               {t.heroTitle}
               <span className="block text-primary mt-2">{t.heroSubtitle}</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+            <p className="text-base xs:text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto mb-6 sm:mb-8">
               {t.heroDesc}
             </p>
-            <div className="flex justify-center space-x-4">
+            <div className="flex flex-col xs:flex-row justify-center gap-4 xs:gap-4 w-full max-w-xs xs:max-w-none mx-auto">
               <a
                 href="https://www.instagram.com/ucsdesa"
                 target="_blank"
@@ -144,7 +143,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="relative py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
+      <section id="about" className="relative py-16 sm:py-24 px-2 sm:px-4 lg:px-8 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">{t.about}</h2>
           <div className="flex justify-center mb-6">
@@ -209,7 +208,7 @@ export default function Home() {
       </section>
 
       {/* Leadership Section */}
-      <section id="leadership" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section id="leadership" className="py-16 sm:py-24 px-2 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">{t.leadership}</h2>
           <div className="grid md:grid-cols-2 gap-12">
@@ -246,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* Events Section */}
-      <section id="events" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+      <section id="events" className="py-16 sm:py-24 px-2 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">{t.upcomingEvents}</h2>
           <div className="max-w-2xl mx-auto text-center">
@@ -279,7 +278,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section id="contact" className="py-16 sm:py-24 px-2 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">{t.contact}</h2>
           <div className="max-w-2xl mx-auto">
@@ -331,8 +330,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <footer className="bg-gray-900 text-white py-10 sm:py-12">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
