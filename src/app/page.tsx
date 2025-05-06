@@ -214,26 +214,24 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center space-x-6 mb-6">
-                <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center border-4 border-primary shadow-lg">
+                <div className="w-[100px] h-[100px] rounded-full bg-primary/10 flex items-center justify-center border-4 border-primary shadow-lg mx-auto">
                   <span className="text-4xl font-bold text-primary">ZK</span>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-900">{t.president}</h3>
-                  <p className="text-primary text-lg">{t.presidentDesc}</p>
+                <div className="text-center mt-2">
+                  <span className="block text-lg font-semibold text-gray-900">Zakaria Kortam</span>
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                {t.vpDesc}
+                {t.presidentDesc}
               </p>
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center space-x-6 mb-6">
-                <div className="w-24 h-24 rounded-full bg-primary/10 flex items-center justify-center border-4 border-primary shadow-lg">
+                <div className="w-[100px] h-[100px] rounded-full bg-primary/10 flex items-center justify-center border-4 border-primary shadow-lg mx-auto">
                   <span className="text-4xl font-bold text-primary">OS</span>
                 </div>
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-900">{t.vp}</h3>
-                  <p className="text-primary text-lg">{t.vpDesc}</p>
+                <div className="text-center mt-2">
+                  <span className="block text-lg font-semibold text-gray-900">Omar Salem</span>
                 </div>
               </div>
               <p className="text-gray-600 leading-relaxed">
