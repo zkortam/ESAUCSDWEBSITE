@@ -100,7 +100,7 @@ export default function Home() {
       <Navigation language={language} onLanguageChange={setLanguage} />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 overflow-hidden min-h-[80vh] flex items-center">
+      <section className="relative pt-32 pb-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-gray-50 overflow-hidden min-h-[calc(80vh+150px)] flex items-center">
         {/* Background Effects */}
         <ParticlesBg />
         <div className="absolute inset-0 bg-[url('/images/egyptian-pattern.png')] opacity-5"></div>
@@ -335,7 +335,7 @@ export default function Home() {
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 relative">
                   <Image
-                    src="/ESU (1080 x 1350 px) (1).svg"
+                    src="/images/esa-logo.svg"
                     alt="ESA Logo"
                     fill
                     className="object-contain"
