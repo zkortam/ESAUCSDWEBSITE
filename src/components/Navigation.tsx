@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function Navigation({ language, onLanguageChange }: { language: 'en' | 'ar', onLanguageChange: (lang: 'en' | 'ar') => void }) {
   return (
     <nav className="bg-white shadow-lg fixed w-full z-50">
@@ -12,7 +14,7 @@ export default function Navigation({ language, onLanguageChange }: { language: '
             <div className="flex-shrink-0 flex items-center">
               <div className="w-12 h-12 relative mr-3">
                 <Image
-                  src="/images/esa-logo.png"
+                  src={`${basePath}/images/esa-logo.png`}
                   alt="ESA Logo"
                   fill
                   className="object-contain"

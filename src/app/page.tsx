@@ -94,6 +94,7 @@ const translations = {
 export default function Home() {
   const [language, setLanguage] = useState<'en' | 'ar'>('en');
   const t = translations[language];
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   return (
     <main className="min-h-screen">
@@ -335,7 +336,7 @@ export default function Home() {
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 relative">
                   <Image
-                    src="/images/esa-logo.png"
+                    src={`${basePath}/images/esa-logo.png`}
                     alt="ESA Logo"
                     fill
                     className="object-contain"
