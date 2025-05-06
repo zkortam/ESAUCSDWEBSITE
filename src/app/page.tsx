@@ -335,7 +335,7 @@ export default function Home() {
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 relative">
                   <Image
-                    src="/images/esa-logo.svg"
+                    src="/images/esa-logo.png"
                     alt="ESA Logo"
                     fill
                     className="object-contain"

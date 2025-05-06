@@ -12,7 +12,7 @@ export default function Navigation({ language, onLanguageChange }: { language: '
             <div className="flex-shrink-0 flex items-center">
               <div className="w-12 h-12 relative mr-3">
                 <Image
-                  src="/images/esa-logo.svg"
+                  src="/images/esa-logo.png"
                   alt="ESA Logo"
                   fill
                   className="object-contain"
