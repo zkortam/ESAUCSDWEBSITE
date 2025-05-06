@@ -4,7 +4,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Remove basePath and assetPrefix for user site
+  basePath: '/ESAUCSDWEBSITE',
+  assetPrefix: '/ESAUCSDWEBSITE',
 }
 
 module.exports = nextConfig 
