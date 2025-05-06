@@ -145,61 +145,48 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="relative py-16 sm:py-24 px-2 sm:px-4 lg:px-8 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">{t.about}</h2>
-          <div className="flex justify-center mb-6">
-            <span className="text-2xl font-bold text-primary mr-2">UC San Diego</span>
-          </div>
-          <p className="text-xl text-gray-600 text-center mb-8">{t.aboutDesc}</p>
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">{t.about}</h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <p className="text-xl text-gray-600 leading-relaxed">
-                {t.aboutDesc2}
-              </p>
-              <div className="flex space-x-4 mt-8">
-                <div className="bg-primary/10 p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold text-primary">{t.mission}</h3>
-                  <p className="text-gray-600">{t.missionDesc}</p>
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed mb-4">{t.aboutDesc}</p>
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed">{t.aboutDesc2}</p>
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                <div className="flex-1 bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center border-t-4 border-primary">
+                  <div className="mb-2 text-2xl text-primary font-bold">{t.mission}</div>
+                  <div className="text-gray-600">{t.missionDesc}</div>
                 </div>
-                <div className="bg-accent/10 p-4 rounded-lg">
-                  <h3 className="text-lg font-semibold text-accent">{t.vision}</h3>
-                  <p className="text-gray-600">{t.visionDesc}</p>
+                <div className="flex-1 bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center border-t-4 border-accent">
+                  <div className="mb-2 text-2xl text-accent font-bold">{t.vision}</div>
+                  <div className="text-gray-600">{t.visionDesc}</div>
                 </div>
               </div>
             </div>
-            <div className="bg-primary/5 p-8 rounded-2xl">
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{t.community}</h3>
-                    <p className="text-gray-600">{t.communityDesc}</p>
-                  </div>
+            <div className="flex flex-col gap-6">
+              <div className="flex items-center gap-4 bg-primary/5 rounded-xl p-4 shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{t.culture}</h3>
-                    <p className="text-gray-600">{t.cultureDesc}</p>
-                  </div>
+                <div>
+                  <div className="text-lg font-semibold text-gray-900">{t.community}</div>
+                  <div className="text-gray-600 text-sm">{t.communityDesc}</div>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{t.events}</h3>
-                    <p className="text-gray-600">{t.eventsDesc}</p>
-                  </div>
+              </div>
+              <div className="flex items-center gap-4 bg-accent/5 rounded-xl p-4 shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+                </div>
+                <div>
+                  <div className="text-lg font-semibold text-gray-900">{t.culture}</div>
+                  <div className="text-gray-600 text-sm">{t.cultureDesc}</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 bg-secondary/10 rounded-xl p-4 shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-secondary/20 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                </div>
+                <div>
+                  <div className="text-lg font-semibold text-gray-900">{t.events}</div>
+                  <div className="text-gray-600 text-sm">{t.eventsDesc}</div>
                 </div>
               </div>
             </div>
@@ -210,33 +197,23 @@ export default function Home() {
       {/* Leadership Section */}
       <section id="leadership" className="py-16 sm:py-24 px-2 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">{t.leadership}</h2>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center space-x-6 mb-6">
-                <div className="w-[100px] h-[100px] rounded-full bg-primary/10 flex items-center justify-center border-4 border-primary shadow-lg mx-auto">
-                  <span className="text-4xl font-bold text-primary">ZK</span>
-                </div>
-                <div className="text-center mt-2">
-                  <span className="block text-lg font-semibold text-gray-900">Zakaria Kortam</span>
-                </div>
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">{t.leadership}</h2>
+          <div className="grid md:grid-cols-2 gap-10">
+            <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
+              <div className="w-[100px] h-[100px] rounded-full bg-primary/10 flex items-center justify-center border-4 border-primary shadow-lg mb-4">
+                <span className="text-4xl font-bold text-primary">ZK</span>
               </div>
-              <p className="text-gray-600 leading-relaxed">
-                {t.presidentDesc}
-              </p>
+              <span className="block text-lg font-semibold text-gray-900 mb-1">Zakaria Kortam</span>
+              <span className="text-primary text-base font-medium mb-2">{t.president}</span>
+              <p className="text-gray-600 text-base leading-relaxed">{t.presidentDesc}</p>
             </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center space-x-6 mb-6">
-                <div className="w-[100px] h-[100px] rounded-full bg-primary/10 flex items-center justify-center border-4 border-primary shadow-lg mx-auto">
-                  <span className="text-4xl font-bold text-primary">OS</span>
-                </div>
-                <div className="text-center mt-2">
-                  <span className="block text-lg font-semibold text-gray-900">Omar Salem</span>
-                </div>
+            <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:shadow-2xl transition-shadow duration-300">
+              <div className="w-[100px] h-[100px] rounded-full bg-primary/10 flex items-center justify-center border-4 border-primary shadow-lg mb-4">
+                <span className="text-4xl font-bold text-primary">OS</span>
               </div>
-              <p className="text-gray-600 leading-relaxed">
-                {t.vpDesc}
-              </p>
+              <span className="block text-lg font-semibold text-gray-900 mb-1">Omar Salem</span>
+              <span className="text-primary text-base font-medium mb-2">{t.vp}</span>
+              <p className="text-gray-600 text-base leading-relaxed">{t.vpDesc}</p>
             </div>
           </div>
         </div>
@@ -245,31 +222,18 @@ export default function Home() {
       {/* Events Section */}
       <section id="events" className="py-16 sm:py-24 px-2 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">{t.upcomingEvents}</h2>
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="bg-white p-12 rounded-2xl shadow-lg">
-              <div className="space-y-6">
-                <div className="w-24 h-24 mx-auto mb-6">
-                  <svg className="w-full h-full text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-semibold text-gray-900">{t.stayTuned}</h3>
-                <p className="text-xl text-gray-600">
-                  {t.eventsDesc2}
-                </p>
-                <div className="pt-4">
-                  <a
-                    href="https://www.instagram.com/ucsdesa"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg"
-                  >
-                    <FaInstagram className="w-6 h-6 mr-2" />
-                    <span>{t.followInstagram}</span>
-                  </a>
-                </div>
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">{t.upcomingEvents}</h2>
+          <div className="flex flex-col items-center">
+            <div className="bg-white rounded-2xl shadow-lg p-10 flex flex-col items-center text-center max-w-xl w-full">
+              <div className="w-24 h-24 mb-6 flex items-center justify-center rounded-full bg-primary/10">
+                <svg className="w-12 h-12 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
               </div>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-2">{t.stayTuned}</h3>
+              <p className="text-lg text-gray-600 mb-4">{t.eventsDesc2}</p>
+              <a href="https://www.instagram.com/ucsdesa" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full text-white bg-primary hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                <FaInstagram className="w-6 h-6 mr-2" />
+                <span>{t.followInstagram}</span>
+              </a>
             </div>
           </div>
         </div>
@@ -278,47 +242,30 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-16 sm:py-24 px-2 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">{t.contact}</h2>
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white p-12 rounded-2xl shadow-lg">
-              <div className="space-y-8">
-                <div className="text-center">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t.connectWithUs}</h3>
-                  <p className="text-gray-600">{t.contactDesc}</p>
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">{t.contact}</h2>
+          <div className="flex flex-col items-center">
+            <div className="bg-white rounded-2xl shadow-lg p-10 flex flex-col items-center text-center max-w-xl w-full">
+              <h3 className="text-2xl font-semibold text-gray-900 mb-4">{t.connectWithUs}</h3>
+              <p className="text-gray-600 mb-8">{t.contactDesc}</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
+                <div className="bg-gray-50 p-6 rounded-xl flex flex-col items-center">
+                  <h4 className="text-lg font-medium text-gray-900 mb-2">{t.email}</h4>
+                  <a href="mailto:zkortam@ucsd.edu" className="text-primary hover:text-primary/80 flex items-center gap-2">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M16 12H8m8 0l-8-8m8 8l-8 8" /></svg>
+                    zkortam@ucsd.edu
+                  </a>
                 </div>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="bg-gray-50 p-6 rounded-xl">
-                    <h4 className="text-lg font-medium text-gray-900 mb-2">{t.email}</h4>
-                    <a href="mailto:zkortam@ucsd.edu" className="text-primary hover:text-primary/80">
-                      zkortam@ucsd.edu
+                <div className="bg-gray-50 p-6 rounded-xl flex flex-col items-center">
+                  <h4 className="text-lg font-medium text-gray-900 mb-2">{t.social}</h4>
+                  <div className="flex flex-col gap-3 items-center">
+                    <a href="https://www.instagram.com/ucsdesa" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 flex items-center gap-2">
+                      <FaInstagram className="w-6 h-6" />
+                      <span>{t.instagram}</span>
                     </a>
-                  </div>
-                  <div className="bg-gray-50 p-6 rounded-xl">
-                    <h4 className="text-lg font-medium text-gray-900 mb-2">{t.social}</h4>
-                    <div className="flex space-x-4">
-                      <a
-                        href="https://www.instagram.com/ucsdesa"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-primary hover:text-primary/80 flex items-center space-x-2"
-                      >
-                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                        <span>{t.instagram}</span>
-                      </a>
-                      <a
-                        href="https://chat.whatsapp.com/GCaVGPsr9um0Bykb9R6F9Q"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#25D366] hover:text-[#25D366]/80 flex items-center space-x-2"
-                      >
-                        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.298.446-.446.149-.148.223-.297.074-.446-.15-.148-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
-                        <span>{t.whatsapp}</span>
-                      </a>
-                    </div>
+                    <a href="https://chat.whatsapp.com/GCaVGPsr9um0Bykb9R6F9Q" target="_blank" rel="noopener noreferrer" className="text-[#25D366] hover:text-[#25D366]/80 flex items-center gap-2">
+                      <FaWhatsapp className="w-6 h-6" />
+                      <span>{t.whatsapp}</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -328,24 +275,17 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-10 sm:py-12">
+      <footer className="bg-gray-900 text-white py-10 sm:py-12 mt-12">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 relative">
-                  <Image
-                    src="/images/esa-logo.png"
-                    alt="ESA Logo"
-                    fill
-                    className="object-contain"
-                  />
+                  <Image src="/images/esa-logo.png" alt="ESA Logo" fill className="object-contain" />
                 </div>
                 <h3 className="text-xl font-bold">ESA UCSD</h3>
               </div>
-              <p className="text-gray-400">
-                {t.copyright}
-              </p>
+              <p className="text-gray-400">{t.copyright}</p>
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4">{t.quickLinks}</h3>
@@ -358,22 +298,20 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-xl font-bold mb-4">{t.connect}</h3>
-              <div className="flex space-x-4">
-                <a
-                  href="https://www.instagram.com/ucsdesa"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  {t.instagram}
+              <div className="flex flex-col gap-2">
+                <a href="https://www.instagram.com/ucsdesa" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                  <FaInstagram className="w-6 h-6" />
+                  <span>{t.instagram}</span>
+                </a>
+                <a href="https://chat.whatsapp.com/GCaVGPsr9um0Bykb9R6F9Q" target="_blank" rel="noopener noreferrer" className="text-[#25D366] hover:text-white transition-colors flex items-center gap-2">
+                  <FaWhatsapp className="w-6 h-6" />
+                  <span>{t.whatsapp}</span>
                 </a>
               </div>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-            <p className="text-gray-400">
-              © {new Date().getFullYear()} Egyptian Student Association at UC San Diego. All rights reserved.
-            </p>
+            <p className="text-gray-400">© {new Date().getFullYear()} Egyptian Student Association at UC San Diego. All rights reserved.</p>
           </div>
         </div>
       </footer>
